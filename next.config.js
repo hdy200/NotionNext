@@ -4,6 +4,11 @@ const BLOG = require('./blog.config')
 const { extractLangPrefix } = require('./lib/utils/pageId')
 const { isExport } = require('./lib/utils/buildMode')
 const { getStaticPageGenerationTimeoutSec } = require('./lib/build/buildEnv')
+const nextConfig = {
+  output: 'export'
+}
+
+module.exports = nextConfig
 
 // 打包时是否分析代码
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
